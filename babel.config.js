@@ -10,7 +10,6 @@ module.exports = {
           '@features': './src/features',
           '@shared': './src/shared',
           '@native': './src/native',
-          '@navigation': './src/navigation',
         },
       },
     ],

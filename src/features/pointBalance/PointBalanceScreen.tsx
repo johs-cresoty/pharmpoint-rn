@@ -1,11 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '@navigation/AppNavigator';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'PointBalance'>;
-
-export default function PointBalanceScreen(_props: Props) {
+export default function PointBalanceScreen() {
   return (
     <View style={styles.container}>
       <Text>PointBalance</Text>

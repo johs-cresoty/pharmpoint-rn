@@ -2,12 +2,10 @@
   "extends": "@react-native/typescript-config",
   "compilerOptions": {
     "types": ["jest"],
-    "baseUrl": ".",
     "paths": {
-      "@features/*": ["src/features/*"],
-      "@shared/*": ["src/shared/*"],
-      "@native/*": ["src/native/*"],
-      "@navigation/*": ["src/navigation/*"]
+      "@features/*": ["./src/features/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@native/*": ["./src/native/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

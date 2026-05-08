@@ -1,8 +1,8 @@
-import React from 'react';
-import { StatusBar } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { AppsInToss } from '@apps-in-toss/framework';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import AppNavigator from '@navigation/AppNavigator';
+import { PropsWithChildren } from 'react';
+import { InitialProps } from '@granite-js/react-native';
+import { context } from './require.context';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,13 +17,12 @@ const queryClient = new QueryClient({
   },
 });
 
-export default function App() {
+function AppContainer({ children }: PropsWithChildren<InitialProps>) {
   return (
     <QueryClientProvider client={queryClient}>
-      <SafeAreaProvider>
-        <StatusBar barStyle="dark-content" />
-        <AppNavigator />
-      </SafeAreaProvider>
+      {children}
     </QueryClientProvider>
   );
 }
+
+export default AppsInToss.registerApp(AppContainer, { context });

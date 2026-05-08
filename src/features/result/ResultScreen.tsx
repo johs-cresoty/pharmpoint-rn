@@ -1,11 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '@navigation/AppNavigator';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'Result'>;
-
-export default function ResultScreen(_props: Props) {
+export default function ResultScreen() {
   return (
     <View style={styles.container}>
       <Text>Result</Text>
